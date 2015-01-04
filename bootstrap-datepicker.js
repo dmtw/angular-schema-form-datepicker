@@ -58,7 +58,7 @@ angular.module('schemaForm').directive('pickADate', function () {
         //since the latter also changes the input, which we do not want.
         picker.set('view', value, {format: scope.format || defaultFormat});
         picker.set('highlight', value, {format: scope.format || defaultFormat});
-
+        picker.set('select', value, {format: scope.format || defaultFormat});
         //piggy back on highlight to and let pickadate do the transformation.
         return picker.get('highlight', viewFormat);
       });
